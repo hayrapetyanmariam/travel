@@ -1,0 +1,751 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+
+:root{
+    --orange: #ffac50;
+    --white: #fff;
+    --gray: #333;
+}
+
+*{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+*::selection{
+    background:var(--orange);
+    color: var(--white);
+}
+
+.btn{
+background: var(--orange);
+color: var(--white);
+padding: 0.5rem 1rem;
+border: .2rem solid var(--orange);
+cursor: pointer;
+font-size: 1.2rem;
+display: inline-block;
+}
+
+.btn:hover{
+background: rgba(255,165 ,0 ,.2 );
+}
+
+#menu-bar{
+    font-size: 3rem;
+    color: var(--white);
+    cursor: pointer;
+    border: 1px solid var(--white); 
+    padding: .5rem;
+    border-radius: 1rem;
+    display: none;
+}
+
+section{
+    padding: 1rem 5%;
+
+}
+
+.heading{
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.heading span{
+    background: rgba(255, 165, 0, .2);
+    padding: .2rem 1rem;
+    color: var(--orange);
+    font-size: 2rem;
+    border-radius: .5rem;
+
+}
+
+.heading span.space{
+    background: none;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--gray);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+header .logo  span{
+    color: var(--orange);
+}
+
+header .navbar a{
+    color: var(--white);
+    font-size: 1.8rem;
+    margin: 0 .5rem;
+}
+
+header .navbar a:hover{
+    color: var(--orange);
+}
+
+header .icons i{
+    font-size: 1.9rem;
+    color: var(--white);
+    margin: 0 .2rem;
+    cursor: pointer;
+}
+
+header .icons i:hover{
+    color: var(--orange);
+}
+
+header form{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    background:var(--gray);
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    clip-path: polygon( 0 0, 100% 0, 100% 0, 0 0);
+}
+
+header form.active{
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+}
+
+header form input{
+    width: 100%;
+    font-size: 1.2rem;
+    padding: .5rem;
+    color: var(--gray);
+    text-transform: lowercase;
+    border-radius: .5rem;
+}
+
+header form label{
+    color: var(--white);
+    font-size: 2rem;
+    margin-left: .5rem;
+}
+
+
+header form label:hover{
+    color: var(--orange);
+}
+
+
+/* .........................................login-form........................................ */
+
+
+.login-form{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form.active{
+    top: 0;
+
+}
+
+.login-form form{
+    background: var(--white);
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 50rem;
+
+}
+
+.login-form form h3{
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.login-form form input[type=text],
+.login-form form input[type=password]{
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--gray);
+    padding: .5rem;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    margin: .5rem 0;
+}
+
+.login-form form input[type=text]:focus,
+.login-form form input[type=password]:focus{
+    border-color: var(--orange);
+}
+
+.login-form form input[type=text]::placeholder,
+.login-form form input[type=password]::placeholder{
+    text-transform: capitalize;
+}
+
+.login-form form .btn{
+    width: 100%;
+}
+
+.login-form form label{
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+
+.login-form form p{
+    font-size: 1.5rem;
+    color: var(--gray);
+    padding: .2rem 0;;
+}
+
+.login-form form p a{
+    color: var(--orange);
+
+}
+
+.login-form form p a:hover{
+    color: var(--gray);
+    text-decoration: underline;
+}
+
+.login-form .fa-times{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: var(--white);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.login-form .fa-times:hover{
+    color: var(--orange);
+}
+
+/* ..........................home......................... */
+
+.home{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home .content{
+    text-align: center;
+}
+
+
+.home .content h1{
+    color: var(--white);
+    font-size: 4rem;
+    text-shadow: 0 .3rem .5rem rgba(0, 255, 0, .5);
+
+}
+
+.home .content p{
+    color: var(--white);
+    font-size: 2rem;
+    margin: .5rem 0;
+}
+
+
+
+.home .controls{
+    background: rgba(0, 0, 0, .3);
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    margin-top: 2rem;
+
+}
+
+.home .controls .vid-btn{
+    width: 1.2rem;
+    height: 1.2rem;
+    background: var(--white);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    margin: .2rem;
+}
+
+.home .controls .vid-btn.active{
+    background: var(--orange);
+}
+
+/* .............book.................. */
+
+.book .inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.book .inner .image{
+    width: 49%;
+
+}
+
+.book .inner .image img{
+    width: 100%;
+}
+
+.book .inner form{
+    width: 49%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.book .inner form .inputBox h3{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.book .inner form .inputBox input{
+    width: 100%;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    font-size: 1.2rem;
+    padding: .5rem;
+    color: var(--gray);
+    text-transform: none;
+}
+
+.book .inner form .inputBox input::placeholder{
+    text-transform: capitalize;
+}
+
+.book .inner form .btn{
+    margin-top: .5rem;
+
+}
+
+/* .....................packages....................... */
+
+.packages .inner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.packages .inner .box{
+    width: 30%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+}
+
+.packages .inner .box:hover{
+    box-shadow: 0  0 3rem rgba(0, 0, 0, .7);
+    cursor: pointer;
+
+}
+
+.packages .inner .box img{
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+}
+
+.packages .inner .box .content{
+    padding: 1rem;
+}
+
+.packages .inner .box h3{
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+
+.packages .inner .box .content h3 i{
+    color: var(--orange);
+}
+
+.packages .inner .box .content p{
+    font-size: 1.2rem;
+    color: #666;
+    padding: .3rem 0;
+}
+
+.packages .inner .box .content .stars i{
+    font-size: 1.2rem;
+    color: var(--orange);
+}
+
+.packages .inner .box .content .prices{
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding: .3rem 0;
+}
+
+.packages .inner .box .content .prices span{
+    font-size: 1.1rem;
+    text-decoration: line-through;
+    color: #666;
+}
+
+/* ......................services...................... */
+
+.services .inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: 1rem;
+}
+
+.services .inner .box{
+    width: 24%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.services .inner .box:hover{
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.services .inner .box i{
+    font-size: 3rem;
+    color: var(--orange);
+}
+
+.services .inner .box h3{
+    font-size: 1.7rem;
+    color: var(--gray);
+}
+
+.services .inner .box p{
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* .........................gallery....................... */
+
+.gallery .inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gallery .inner .box{
+    width: 24%;
+    height: 16rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .inner .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .inner .box .content{
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    text-align: center;
+    padding: 2.3rem;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .inner .box:hover .content{
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+.gallery .inner .box .content h3{
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.gallery .inner .box .content p{
+    font-size: 1.3rem;
+    color: var(--white);
+    margin: 1rem;
+}
+
+/* .......................contact....................... */
+
+.contact .inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact .inner .image{
+    width: 49%;
+}
+
+.contact .inner .image img{
+    width: 100%;
+}
+
+.contact .inner form{
+    width: 49%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+.contact .inner form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .inner form .inputBox input{
+    width: 49%;
+    background: #f7f7f7;
+    margin: .5rem 0;
+    font-size: 1.2rem;
+    padding: .7rem;
+    text-transform: none;
+    color: var(--gray);
+}
+
+.contact .inner form textarea{
+    width: 100%;
+    background: #f7f7f7;
+    resize: none;
+    padding: .7rem;
+    text-transform: none;
+    color: var(--gray);
+    font-size: 1.3rem;
+}
+
+/* ...........................footer..................... */
+
+
+footer{
+    background: var(--gray);
+}
+
+footer .inner{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer .inner .box{
+    width: 23%;
+    padding: 1rem ;
+}
+
+footer .inner .box h3{
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: .5rem 0;
+}
+
+footer .inner .box p{
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+footer .inner .box a{
+    color: var(--white);
+    display: block;
+    padding: .3rem 0;
+    font-size: 1,1rem;
+}
+
+
+footer .inner .box a:hover{
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+footer .created{
+    text-align: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+    padding: 1rem 0;
+}
+
+footer .created span{
+    color: var(--orange);
+}
+
+@media(max-width: 1200px){
+    html{
+    font-size: 90%;
+    }
+
+section{
+    padding: .5rem 3%;
+    }
+
+}
+
+@media(max-width: 1160px){
+    .services .inner .box{
+        width: 23%;
+    }
+
+    .gallery .inner .box{
+        width: 23%;
+    }
+
+    .gallery .inner .box .content{
+        padding: 2rem;
+    }
+    .gallery .inner .box .content{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 1090px){
+
+    header #menu-bar{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        right: 0px;
+        background: var(--gray);
+        border-top: .1rem solid rgba(255, 255, 255, .2);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        background: #222;
+        margin: 1rem 0;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+
+    .book .inner .image img{
+        display: none;
+    }
+
+    .book .inner form{
+        width: 100%;
+    }
+
+    .contact .inner .image img{
+        display: none;
+    }
+
+    .contact .inner form{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+@media(max-width: 767px){
+.packages .inner .box{
+    width: 48%;
+}
+
+.services .inner .box{
+    width: 48%
+}
+
+.gallery .inner .box{
+    width: 48%;
+}
+
+}
+
+
+@media(max-width: 570px){
+.packages .inner .box{
+    width: 100%;
+}
+
+.services .inner .box{
+    width: 100%;
+}
+
+.gallery .inner .box{
+    width: 100%;
+}
+
+footer .inner .box{
+    width: 48%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
